@@ -1,0 +1,675 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <!-- This is a simple example template that you can edit to create your own custom templates -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Facebook sharing information tags -->
+        <meta property="og:title" content="*|MC:SUBJECT|*">
+        
+        <title>*|MC:SUBJECT|*</title>
+		
+	<style type="text/css">
+		#outlook a{
+			padding:0;
+		}
+		body{
+			width:100% !important;
+		}
+		body{
+			-webkit-text-size-adjust:none;
+		}
+		body{
+			margin:0;
+			padding:0;
+		}
+		img{
+			border:none;
+			font-size:14px;
+			font-weight:bold;
+			height:auto;
+			line-height:100%;
+			outline:none;
+			text-decoration:none;
+			text-transform:capitalize;
+		}
+		#backgroundTable{
+			height:100% !important;
+			margin:0;
+			padding:0;
+			width:100% !important;
+		}
+	/*
+	@tab Page
+	@section background color
+	@tip Set the background color for your email. You may want to choose one that matches your company's branding.
+	@theme page
+	*/
+		body,.backgroundTable{
+			/*@editable*/background-color:#FAFAFA;
+		}
+	/*
+	@tab Page
+	@section email border
+	@tip Set the border for your email.
+	*/
+		#templateContainer{
+			/*@editable*/border:1px solid #DDDDDD;
+		}
+	/*
+	@tab Page
+	@section heading 1
+	@tip Set the styling for all first-level headings in your emails. These should be the largest of your headings.
+	@theme heading1
+	*/
+		h1,.h1{
+			/*@editable*/color:#202020;
+			display:block;
+			/*@editable*/font-family:Open Sans;
+			/*@editable*/font-size:34px;
+			/*@editable*/font-weight:bold;
+			/*@editable*/line-height:100%;
+			margin-bottom:10px;
+			/*@editable*/text-align:left;
+		}
+	/*
+	@tab Page
+	@section heading 2
+	@tip Set the styling for all second-level headings in your emails.
+	@theme heading2
+	*/
+		h2,.h2{
+			/*@editable*/color:#202020;
+			display:block;
+			/*@editable*/font-family:Open Sans;
+			/*@editable*/font-size:30px;
+			/*@editable*/font-weight:bold;
+			/*@editable*/line-height:100%;
+			margin-bottom:10px;
+			/*@editable*/text-align:left;
+		}
+	/*
+	@tab Page
+	@section heading 3
+	@tip Set the styling for all third-level headings in your emails.
+	@theme heading3
+	*/
+		h3,.h3{
+			/*@editable*/color:#202020;
+			display:block;
+			/*@editable*/font-family:Open Sans;
+			/*@editable*/font-size:26px;
+			/*@editable*/font-weight:bold;
+			/*@editable*/line-height:100%;
+			margin-bottom:10px;
+			/*@editable*/text-align:left;
+		}
+	/*
+	@tab Page
+	@section heading 4
+	@tip Set the styling for all fourth-level headings in your emails. These should be the smallest of your headings.
+	@theme heading4
+	*/
+		h4,.h4{
+			/*@editable*/color:#202020;
+			display:block;
+			/*@editable*/font-family:Open Sans;
+			/*@editable*/font-size:22px;
+			/*@editable*/font-weight:bold;
+			/*@editable*/line-height:100%;
+			margin-bottom:10px;
+			/*@editable*/text-align:left;
+		}
+	/*
+	@tab Header
+	@section preheader style
+	@tip Set the background color for your email's preheader area.
+	@theme page
+	*/
+		#templatePreheader{
+			/*@editable*/background-color:#FAFAFA;
+		}
+	/*
+	@tab Header
+	@section preheader text
+	@tip Set the styling for your email's preheader text. Choose a size and color that is easy to read.
+	*/
+		.preheaderContent div{
+			/*@editable*/color:#505050;
+			/*@editable*/font-family:Open Sans;
+			/*@editable*/font-size:10px;
+			/*@editable*/line-height:100%;
+			/*@editable*/text-align:left;
+		}
+	/*
+	@tab Header
+	@section preheader link
+	@tip Set the styling for your email's preheader links. Choose a color that helps them stand out from your text.
+	*/
+		.preheaderContent div a:link,.preheaderContent div a:visited{
+			/*@editable*/color:#7db924;
+			/*@editable*/font-weight:normal;
+			/*@editable*/text-decoration: none;
+		}
+		.preheaderContent div img{
+			height:auto;
+			max-width:600px;
+		}
+	/*
+	@tab Header
+	@section header style
+	@tip Set the background color and border for your email's header area.
+	@theme header
+	*/
+		#templateHeader{
+			/*@editable*/background-color:#FFFFFF;
+			/*@editable*/border-bottom:0;
+		}
+	/*
+	@tab Header
+	@section header text
+	@tip Set the styling for your email's header text. Choose a size and color that is easy to read.
+	*/
+		.headerContent{
+			/*@editable*/color:#202020;
+			/*@editable*/font-family:Open Sans;
+			/*@editable*/font-size:34px;
+			/*@editable*/font-weight:bold;
+			/*@editable*/line-height:100%;
+			/*@editable*/padding:0;
+			/*@editable*/text-align:center;
+			/*@editable*/vertical-align:middle;
+		}
+	/*
+	@tab Header
+	@section header link
+	@tip Set the styling for your email's header links. Choose a color that helps them stand out from your text.
+	*/
+		.headerContent a:link,.headerContent a:visited{
+			/*@editable*/color:#7db924;
+			/*@editable*/font-weight:normal;
+			/*@editable*/text-decoration:none;
+		}
+		#headerImage{
+			height:auto;
+			max-width:600px !important;
+		}
+	/*
+	@tab Body
+	@section body style
+	@tip Set the background color for your email's body area.
+	*/
+		#templateContainer,.bodyContent{
+			/*@editable*/background-color:#FDFDFD;
+		}
+	/*
+	@tab Body
+	@section body text
+	@tip Set the styling for your email's main content text. Choose a size and color that is easy to read.
+	@theme main
+	*/
+		.bodyContent div{
+			/*@editable*/color:#505050;
+			/*@editable*/font-family:Open Sans;
+			/*@editable*/font-size:14px;
+			/*@editable*/line-height:150%;
+			/*@editable*/text-align:left;
+		}
+	/*
+	@tab Body
+	@section body link
+	@tip Set the styling for your email's main content links. Choose a color that helps them stand out from your text.
+	*/
+		.bodyContent div a:link,.bodyContent div a:visited{
+			/*@editable*/color:#7db924;
+			/*@editable*/font-weight:normal;
+			/*@editable*/text-decoration:none;
+		}
+		.bodyContent img{
+			display:inline;
+			/*margin-bottom:10px;*/
+		}
+	/*
+	@tab Footer
+	@section footer style
+	@tip Set the background color and top border for your email's footer area.
+	@theme footer
+	*/
+		#templateFooter{
+			/*@editable*/background-color:#FDFDFD;
+			/*@editable*/border-top:0;
+		}
+	/*
+	@tab Footer
+	@section footer text
+	@tip Set the styling for your email's footer text. Choose a size and color that is easy to read.
+	@theme footer
+	*/
+		.footerContent div{
+			/*@editable*/color:#707070;
+			/*@editable*/font-family:Open Sans;
+			/*@editable*/font-size:12px;
+			/*@editable*/line-height:125%;
+			/*@editable*/text-align:left;
+		}
+	/*
+	@tab Footer
+	@section footer link
+	@tip Set the styling for your email's footer links. Choose a color that helps them stand out from your text.
+	*/
+		.footerContent div a:link,.footerContent div a:visited{
+			/*@editable*/color:#7db924;
+			/*@editable*/font-weight:normal;
+			/*@editable*/text-decoration:none;
+		}
+		.footerContent img{
+			display:inline;
+		}
+	/*
+	@tab Footer
+	@section social bar style
+	@tip Set the background color and border for your email's footer social bar.
+	*/
+		#social{
+			/*@editable*/background-color:#FAFAFA;
+			/*@editable*/border:1px solid #F5F5F5;
+		}
+	/*
+	@tab Footer
+	@section social bar style
+	@tip Set the background color and border for your email's footer social bar.
+	*/
+		#social div{
+			/*@editable*/text-align:center;
+		}
+	/*
+	@tab Footer
+	@section utility bar style
+	@tip Set the background color and border for your email's footer utility bar.
+	*/
+		#utility{
+			/*@editable*/background-color:#FDFDFD;
+			/*@editable*/border-top:1px solid #F5F5F5;
+		}
+	/*
+	@tab Footer
+	@section utility bar style
+	@tip Set the background color and border for your email's footer utility bar.
+	*/
+		#utility div{
+			/*@editable*/text-align:center;
+		}
+		#monkeyRewards img{
+			max-width:160px;
+		}
+	/*
+	@custom Style 
+	@by Anthony at e27
+	*/
+	a{
+		text-decoration: none;
+		text-transform: none;
+	}
+	#templateContainer, .bodyContent{
+		background: #f3f3f3;
+	}
+	#templateHeader{
+		height: 32px;
+		background: #333;
+		padding: 5px 20px;
+	}
+	#templateHeader img{
+		height: 14px;
+		vertical-align: middle;
+	}
+
+	img{
+		max-width: 100%;
+	}
+
+	.headerContent{
+		text-align: left;
+		color: #fff;
+		font-size: 14px;
+		font-weight: normal;
+	}
+
+
+	.headerSocial{
+		color: #fff;
+		text-align: right;
+	}
+
+	.box-view{
+		background: white;
+		border-radius: 4px;
+		overflow: hidden;		
+	}
+
+	.featured-content-block{
+
+	}
+	.featured-content-block .content{
+		padding: 30px 30px;
+	}
+
+	.content-block{
+
+	}
+
+	.editor-note, .content-blocks{
+		padding: 20px 30px;
+	}
+	.editor-note .editor-note-author{
+		width: 100%;
+		text-align: center;
+		margin-top: 40px;
+	}
+	.editor-note .editor-note-author img{
+		border-radius: 50%;
+		width: 48px
+	}
+	.editor-note .editor-note-author p{
+		margin-top: 0;
+	}
+
+
+	.content-blocks{
+		padding-top: 40px;
+	}
+	.content-block img{
+		width: 128px;
+	}
+	
+	.footer-nav{
+
+	}
+	.footer-nav img{
+		width: 24px;
+	}
+
+</style></head>
+    <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+    	<center>
+        	<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="backgroundTable">
+            	<tr>
+                	<td align="center" valign="top">
+                        <!-- // Begin Template Preheader \\ -->
+                        <table border="0" cellpadding="10" cellspacing="0" width="600" id="templatePreheader">
+                            <tr>
+                                <td valign="top" class="preheaderContent">
+                                
+                                	<!-- // Begin Module: Standard Preheader \\ -->
+                                    <table border="0" cellpadding="10" cellspacing="0" width="100%">
+                                    	<tr>
+                                        	<td valign="top">
+                                            	<div mc:edit="std_preheader_content">
+                                                	Use one or two sentences in this area to offer a teaser of your email's content. Text here will show in a preview area in some email clients.
+                                                </div>
+                                            </td>
+                                            <td valign="top" width="180">
+                                            	<div mc:edit="std_preheader_links">
+                                                	<!-- *|IFNOT:ARCHIVE_PAGE|* -->Is this email not displaying correctly?<br><a href="*|ARCHIVE|*" target="_blank">View it in your browser</a>.<!-- *|END:IF|* -->
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                	<!-- // End Module: Standard Preheader \\ -->
+                                
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- // End Template Preheader \\ -->
+                    	<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateContainer">
+                        	<tr>
+                            	<td align="center" valign="top">
+                                    <!-- // Begin Template Header \\ -->
+                                	<table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateHeader">
+                                        <tr>
+                                            <td class="headerContent" valign="middle">
+												<a href="http://e27.co">
+													<img style="vertical-align: middle; max-height: 14px" class="logo" src="https://e27.co/assets/img/jeangrey/logo_e27.png" alt="">
+													<span style="vertical-align: middle; margin-left: 5px; font-size: 12px; color: #fff">Daily Digest</span>
+												</a>
+                                            	<!-- // Begin Module: Standard Header Image \\ -->
+                                            	<!--<img src="http://gallery.mailchimp.com/653153ae841fd11de66ad181a/images/placeholder_600.gif" style="max-width:600px;" id="headerImage campaign-icon" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext>-->
+                                            	<!-- // End Module: Standard Header Image \\ -->
+                                            
+                                            </td>
+											<td class="headerSocial">
+												<a href="https://www.facebook.com/e27" style="margin-right: 5px;">
+													<img src="fb.png" alt="">
+												</a>
+												<a href="https://twitter.com/e27co">
+													<img src="tw.png" alt="">
+												</a>
+											</td>
+                                        </tr>
+                                    </table>
+                                    <!-- // End Template Header \\ -->
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td align="center" valign="top">
+                                    <!-- // Begin Template Body \\ -->
+                                	<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateBody">
+                                    	<tr>
+                                            <td valign="top" class="bodyContent">
+                                
+                                                <!-- // Begin Module: Standard Content \\ -->
+                                                <table border="0" cellpadding="0" cellspacing="20" width="100%">
+                                                    
+													<!-- Featured Content-->
+													<tr>
+                                                        <td valign="top" class="box-view featured-content-block">
+                                                            <div mc:edit="std_content00" >
+                                                                <img src="https://e27.co/wp-content/uploads/2017/02/recommendation.jpeg" alt="">
+																<div class="content">
+																	<span class="h1">Go-Jek releases new app for Go-Life division, ready to launch more lifestyle services</span>
+                                                                	<span>In a rather surprising move, Indonesian ride-hailing giant Go-Jek has released a new mobile app for its lifestyle division, Go-Life. </span>
+																</div>																
+                                                            </div>
+														</td>
+                                                    </tr>
+
+													<!-- Editor Note -->
+													<tr>
+														<td class="editor-note box-view">
+															<h2>Editor's Note</h2>
+															<p style="font-family: Open Sans; font-size: 16px">																	
+																One of the best classes I ever took was "Birth and Death of Stars". I was in my final year and I scored a C- (the minimal passing grade). To be frank, I think I actually failed. But, the teacher saw "History" behind my name and gave me pity points for trying hard. I loved that class — I just suck at math.
+																<br><br>
+																The point is, every now and then a story reminds us of the tech community's greatest strength — the embrace of curiosity. Yesterday, no story made more waves than NASA's discovery of 7 Earth-size planets hosted by a nearby star.
+																<br><br>
+																It was a reminder that people everywhere are accomplishing great things, driven in large part by their curiosity. So if you're interested in space, but terrible at math, take a class. You'll probably score badly, but that's not really the point, is it?
+																<br><br>
+																Oh yeah, and some dude sold a [bleeping] ship on Taobao this week.
+															</p>
+															<div class="editor-note-author">
+																<img src="https://scontent.fsgn2-2.fna.fbcdn.net/v/t1.0-1/p200x200/15727006_233554743752328_8853956537853816722_n.jpg?oh=af62cafb6d4114ed1d99c458aa52a9fe&oe=593400C2" alt="">
+																<p>
+																	<a>
+																		<b>Kevin McSpadden</b>
+																		<br>
+																		e27 Southeast Asia Editor
+																	</a>
+																</p>
+															</div>
+														</td>
+													</tr>
+
+													<!-- Ads (Echelon or something else)-->
+													<tr>
+														<td>
+															<a href=""><img src="https://media.giphy.com/media/26BGz9NZWvploCDNm/source.gif" alt=""></a>
+														</td>
+													</tr>
+
+
+													<!-- Content -->
+													<tr>
+														<td class="box-view">
+															<table cellspacing="20px" width="100%">
+																
+																
+																<tr>
+																	<td style="border-bottom: 1px rgba(0, 0, 0, 0.08) solid; padding-bottom: 20px ">
+																		<table align="left" border="0" cellpadding="" cellspacing="" width="200">
+																			<tr>
+																				<td align="center" valign="top">
+																					<img src="https://e27.co/wp-content/uploads/2017/03/Lattice80_Vizag_event.jpg" width="200" />
+																				</td>
+																			</tr>
+																		</table>
+																		<table align="left" border="0" cellpadding="0" cellspacing="0" width="300">
+																			<tr>
+																				<td valign="top" style="color:#404040; font-family:Helvetica; font-size:16px; line-height:125%; text-align:left; padding-bottom:20px;">
+																					<h3 style="margin: 0 0 0 10px; font-size: 18px; line-height: 1.5">
+																						Lattice80 expands to Vizag to build fintech ties between Singapore and India
+																					</h3>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+
+															
+																<tr>
+																	<td align="center">
+																		<a href="http://e27.co" target="_blank">Read more on e27...</a>
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													
+													<!-- Partner Ads-->
+													<tr>
+														<td>
+															<div></div>
+														</td>
+													</tr>
+                                                </table>
+                                                <!-- // End Module: Standard Content \\ -->
+                                                
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- // End Template Body \\ -->
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td align="center" valign="top">
+                                    <!-- // Begin Template Footer \\ -->
+                                	<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateFooter">
+                                    	<!-- e27 menu-->
+										<tr class="footer-nav">
+											<td>
+												<table width="100%">
+													<tr>
+														<td align="center">
+															<a href="http://e27.co/">
+																<img src="https://e27.co/assets/img/jeangrey/nav/news.png" alt="">
+																<p>News</p>
+															</a>
+														</td>
+														<td align="center">
+															<a href="http://e27.co/echelon">
+																<img src="https://e27.co/assets/img/jeangrey/nav/echelon.png" alt="">															
+																Echelon
+															</a>
+														</td>
+														<td align="center">
+															<a href="http://e27.co/startups">
+																<img src="https://e27.co/assets/img/jeangrey/nav/startups.png" alt="">															
+																Startups
+															</a>
+														</td>
+														<td align="center">
+															<a href="http://e27.co/investors">
+																<img src="https://e27.co/assets/img/jeangrey/nav/investors.png" alt="">															
+																Investors
+															</a>
+														</td>
+														<td align="center">
+															<a href="http://e27.co/jobs">
+																<img src="https://e27.co/assets/img/jeangrey/nav/jobs.png" alt="">															
+																Jobs
+															</a>
+														</td>
+														<td align="center">
+															<a href="http://e27.co/marketplace">
+																<img src="https://e27.co/assets/img/jeangrey/nav/products.png" alt="">															
+																Marketplace
+															</a>
+														</td>
+													</tr>
+												</table>
+											</td>
+
+										</tr>
+										<tr>
+                                        	<td valign="top" class="footerContent" style="background: #333">
+                                            
+                                                <!-- // Begin Module: Standard Footer \\ -->
+                                                <table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                                   	<tr style="color: white;">
+														<td>
+															<table>
+																<tr>
+																		<td valign="middle" >
+																			<span style="font-size: 20px; font-family: Open Sans">
+																				"To empower entrepreneurs with the tools to build and grow their companies"
+																			</span>
+																		</td>
+																		<td align="right">
+																			<button href="http://e27.co" style="font-size: 10px; border: white solid 2px; border-radius: 4px; padding: 8px 20px; font-weight: semi-bold">
+																				VISIT E27 NOW
+																			</button>
+																		</td>
+																</tr>
+															</table>
+														</td>													
+												   	</tr>
+                                                    <tr>
+                                                        <td valign="top" align="center">
+                                                            <div mc:edit="std_footer" style="text-align: center; color: white; line-height: 1.5">
+																<b>Our mailing address is:</b>
+																<br>
+																e27
+																<br>
+																71 Ayer Rajah Crescent, #05-21
+																<br>
+																Singapore 139951
+																<br>
+																Singapore
+
+																Copyright © 2016, Optimatic Pte Ltd, All rights reserved.
+                                                            </div>
+                                                            <br>
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2" valign="middle" id="utility">
+                                                            <div mc:edit="std_utility">
+                                                                &nbsp;<a href="*|UNSUB|*">unsubscribe from this list</a> | <a href="*|UPDATE_PROFILE|*">update subscription preferences</a><!-- *|IFNOT:ARCHIVE_PAGE|* --> | <a href="*|ARCHIVE|*">view email in browser</a><!-- *|END:IF|* -->&nbsp;
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- // End Module: Standard Footer \\ -->
+                                            
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- // End Template Footer \\ -->
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+</html>
