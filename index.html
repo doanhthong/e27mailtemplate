@@ -316,12 +316,17 @@
 	}
 	#templateHeader{
 		height: 32px;
-		background: #333;
-		padding: 5px 20px;
+		background: transparent;
+		/*background: #333;*/
+		padding: 0px 20px;
 	}
 	#templateHeader img{
 		height: 14px;
 		vertical-align: middle;
+	}
+
+	#templateHeader .logo{
+		height: 32px;
 	}
 
 	img{
@@ -378,6 +383,9 @@
 		margin-top: 0;
 	}
 
+	.editor-note .editor-note-author p a{
+		color: #222
+	}
 
 	.content-blocks{
 		padding-top: 40px;
@@ -438,6 +446,10 @@
 		margin-bottom: 2px;
 	}
 
+	.social-channels img{
+		height: 24px;
+	}
+
 </style></head>
     <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
     	<center>
@@ -445,7 +457,7 @@
             	<tr>
                 	<td align="center" valign="top">
                         <!-- // Begin Template Preheader \\ -->
-                        <table border="0" cellpadding="10" cellspacing="0" width="auto" id="templatePreheader">
+                        <table border="0" cellpadding="0" cellspacing="0" width="auto" id="templatePreheader">
                             <tr>
                                 <td valign="top" class="preheaderContent">
                                 
@@ -455,7 +467,7 @@
                                         
                                             <td valign="top" width="180" align="center" >
                                             	<div mc:edit="std_preheader_links" style="text-align: center">
-                                                	<!-- *|IFNOT:ARCHIVE_PAGE|* --><a href="*|ARCHIVE|*" target="_blank">View it in your browser</a><!-- *|END:IF|* -->
+                                                	<!-- *|IFNOT:ARCHIVE_PAGE|* --><a href="*|ARCHIVE|*" target="_blank" style="color: #222; text-decoration: underline">View it in your browser</a><!-- *|END:IF|* -->
                                                 </div>
                                             </td>
                                         </tr>
@@ -469,30 +481,9 @@
                     	<table border="0" cellpadding="0" cellspacing="0" width="auto" id="templateContainer">
                         	<tr>
                             	<td align="center" valign="top">
-                                    <!-- // Begin Template Header \\ -->
-                                	<table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateHeader">
-                                        <tr>
-                                            <td class="headerContent" valign="middle">
-												<a href="http://e27.co">
-													<img style="vertical-align: middle; max-height: 14px" class="logo" src="https://e27.co/assets/img/jeangrey/logo_e27.png" alt="">
-													<span style="vertical-align: middle; margin-left: 5px; font-size: 12px; color: #fff; font-weight: 500">Daily Digest</span>
-												</a>
-                                            	<!-- // Begin Module: Standard Header Image \\ -->
-                                            	<!--<img src="http://gallery.mailchimp.com/653153ae841fd11de66ad181a/images/placeholder_600.gif" style="max-width:600px;" id="headerImage campaign-icon" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext>-->
-                                            	<!-- // End Module: Standard Header Image \\ -->
-                                            
-                                            </td>
-											<td class="headerSocial">
-												<a href="https://www.facebook.com/e27" style="margin-right: 5px;">
-													<img src="fb.png" alt="">
-												</a>
-												<a href="https://twitter.com/e27co">
-													<img src="tw.png" alt="">
-												</a>
-											</td>
-                                        </tr>
-                                    </table>
-                                    <!-- // End Template Header \\ -->
+                                   <a href="http://e27.co">
+										<img class="logo" style="height:32px; margin-top: 20px" src="logo.png" alt="">
+									</a>
                                 </td>
                             </tr>
                         	<tr>
@@ -534,7 +525,7 @@
 															<div class="editor-note-author">
 																<img mc:edit="editor_note_author_img" style="margin-bottom: 10px" src="https://scontent.fsgn2-2.fna.fbcdn.net/v/t1.0-1/p200x200/15727006_233554743752328_8853956537853816722_n.jpg?oh=af62cafb6d4114ed1d99c458aa52a9fe&oe=593400C2" alt="">
 																<p>
-																	<a mc:edit="editor_note_author_name" href="https://e27.co/kevin-mcspadden" style="color: #222">
+																	<a mc:edit="editor_note_author_name" href="https://e27.co/kevin-mcspadden">
 																		<b >Kevin McSpadden</b>
 																		<br>
 																		e27 Southeast Asia Editor
@@ -570,12 +561,12 @@
 																		<table align="left" border="0" cellpadding="0" cellspacing="0" width="70%">
 																			<tr>
 																				<td valign="top" class="content">
-																					<a mc:edit="article_title" style="color: #222">
+																					<div mc:edit="article_content">
 																						<h3>
 																							Lattice80 expands to Vizag to build fintech ties between Singapore and India
 																						</h3>
 																						<p>by Anthony</p>
-																					</a>
+																					</div>
 																				</td>
 																			</tr>
 																		</table>
@@ -600,46 +591,30 @@
 																	</td>
 																</tr>
 																
-																<tr>
-																	<td class="content-block">
+																<tr mc:repeatable>
+																	<td class="content-block" >																	
 																		<table align="left" border="0" cellpadding="" cellspacing="" width="30%">
 																			<tr>
 																				<td align="center" valign="top">
-																					<img src="https://e27.co/wp-content/uploads/2017/03/Lattice80_Vizag_event.jpg" width="200" />
+																					<img mc:edit="article_image" src="https://e27.co/wp-content/uploads/2017/03/Lattice80_Vizag_event.jpg" width="200" />
 																				</td>
 																			</tr>
 																		</table>
 																		<table align="left" border="0" cellpadding="0" cellspacing="0" width="70%">
 																			<tr>
 																				<td valign="top" class="content">
-																					<h3>
-																						Lattice80 expands to Vizag to build fintech ties between Singapore and India
-																					</h3>
+																					<div a mc:edit="article_content" style="color: #222">
+																						<h3>
+																							Lattice80 expands to Vizag to build fintech ties between Singapore and India
+																						</h3>
+																						<p>by Anthony</p>
+																					</div>
 																				</td>
 																			</tr>
 																		</table>
 																	</td>																	
 																</tr>
-																<tr>
-																	<td class="content-block">
-																		<table align="left" border="0" cellpadding="" cellspacing="" width="30%">
-																			<tr>
-																				<td align="center" valign="top">
-																					<img src="https://e27.co/wp-content/uploads/2017/03/Lattice80_Vizag_event.jpg" width="200" />
-																				</td>
-																			</tr>
-																		</table>
-																		<table align="left" border="0" cellpadding="0" cellspacing="0" width="70%">
-																			<tr>
-																				<td valign="top" class="content">
-																					<h3>
-																						Lattice80 expands to Vizag to build fintech ties between Singapore and India
-																					</h3>
-																				</td>
-																			</tr>
-																		</table>
-																	</td>																	
-																</tr>
+																
 															
 																<tr>
 																	<td align="center">
@@ -652,7 +627,7 @@
 													
 													<!-- Partner Ads-->
 													<tr>
-														<td>
+														<td align="center">
 															<div style="text-align: center" class="box-view">
 																<img  mc:edit="patner_ads" src="https://gallery.mailchimp.com/02d444e2ce648a479f4b6726f/images/43a4c770-b9a6-47e8-a2a3-28cba5fda752.jpg" alt="">
 																<p  mc:edit="patner_ads_content" style="padding: 10px 40px">
@@ -664,7 +639,7 @@
 														</td>
 													</tr>
 													<tr>
-														<td style="text-align: center; font-size: 14px">
+														<td style="text-align: center; font-size: 14px" align="center">
 															Want your brand on our Daily Digest? Email us at <a href="mailto:engage@e27.co" class="">engage@e27.co</a>!
 														</td>
 													</tr>
@@ -751,7 +726,7 @@
 														</td>													
 												   	</tr>
                                                     <tr>
-                                                        <td valign="top" align="center">
+                                                        <td valign="top" align="center" style="padding-bottom: 0">
                                                             <div mc:edit="std_footer" style="text-align: center; color: white; line-height: 1.5">
 																<b>Our mailing address is:</b>
 																<br>
@@ -761,18 +736,28 @@
 																<br>
 																Singapore 139951
 																<br>
-																Singapore
-
 																Copyright © 2016, Optimatic Pte Ltd, All rights reserved.
                                                             </div>
                                                             <br>
                                                         </td>
 
                                                     </tr>
+													<tr>
+														<td align="center" class="social-channels">
+															<a href="https://www.facebook.com/e27" style="margin-right: 5px;">
+																<img src="fb.png" alt="">
+															</a>
+															<a href="https://twitter.com/e27co">
+																<img src="tw.png" alt="">
+															</a>
+														</td>
+													
+													</tr>
+
                                                     <tr>
                                                         <td colspan="2" valign="middle" id="utility">
                                                             <div mc:edit="std_utility">
-                                                                &nbsp;<a href="*|UNSUB|*">unsubscribe from this list</a> | <a href="*|UPDATE_PROFILE|*">update subscription preferences</a><!-- *|IFNOT:ARCHIVE_PAGE|* --> | <a href="*|ARCHIVE|*">view email in browser</a><!-- *|END:IF|* -->&nbsp;
+                                                                <a href="*|UNSUB|*" style="color: #222; text-decoration: underline">unsubscribe from this list</a> 
                                                             </div>
                                                         </td>
                                                     </tr>
