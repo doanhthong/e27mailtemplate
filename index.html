@@ -46,6 +46,7 @@
 	*/
 		body,.backgroundTable{
 			/*@editable*/background-color:#FAFAFA;
+			font-family: Helvetica;
 		}
 	/*
 	@tab Page
@@ -53,7 +54,7 @@
 	@tip Set the border for your email.
 	*/
 		#templateContainer{
-			/*@editable*/border:1px solid #DDDDDD;
+			/*@editable*/border:0px solid #DDDDDD;
 		}
 	/*
 	@tab Page
@@ -64,8 +65,8 @@
 		h1,.h1{
 			/*@editable*/color:#202020;
 			display:block;
-			/*@editable*/font-family:Open Sans;
-			/*@editable*/font-size:34px;
+			/*@editable*/font-family:Helvetica;
+			/*@editable*/font-size:24px;
 			/*@editable*/font-weight:bold;
 			/*@editable*/line-height:120%;
 			margin-bottom:10px;
@@ -80,8 +81,8 @@
 		h2,.h2{
 			/*@editable*/color:#202020;
 			display:block;
-			/*@editable*/font-family:Open Sans;
-			/*@editable*/font-size:30px;
+			/*@editable*/font-family:Helvetica;
+			/*@editable*/font-size:24px;
 			/*@editable*/font-weight:bold;
 			/*@editable*/line-height:100%;
 			margin-bottom:10px;
@@ -96,7 +97,7 @@
 		h3,.h3{
 			/*@editable*/color:#202020;
 			display:block;
-			/*@editable*/font-family:Open Sans;
+			/*@editable*/font-family:Helvetica;
 			/*@editable*/font-size:26px;
 			/*@editable*/font-weight:bold;
 			/*@editable*/line-height:100%;
@@ -112,7 +113,7 @@
 		h4,.h4{
 			/*@editable*/color:#202020;
 			display:block;
-			/*@editable*/font-family:Open Sans;
+			/*@editable*/font-family:Helvetica;
 			/*@editable*/font-size:22px;
 			/*@editable*/font-weight:bold;
 			/*@editable*/line-height:100%;
@@ -135,7 +136,7 @@
 	*/
 		.preheaderContent div{
 			/*@editable*/color:#505050;
-			/*@editable*/font-family:Open Sans;
+			/*@editable*/font-family:Helvetica;
 			/*@editable*/font-size:10px;
 			/*@editable*/line-height:100%;
 			/*@editable*/text-align:left;
@@ -171,7 +172,7 @@
 	*/
 		.headerContent{
 			/*@editable*/color:#202020;
-			/*@editable*/font-family:Open Sans;
+			/*@editable*/font-family:Helvetica;
 			/*@editable*/font-size:34px;
 			/*@editable*/font-weight:bold;
 			/*@editable*/line-height:100%;
@@ -209,7 +210,7 @@
 	*/
 		.bodyContent div{
 			/*@editable*/color:#505050;
-			/*@editable*/font-family:Open Sans;
+			/*@editable*/font-family:Helvetica;
 			/*@editable*/font-size:14px;
 			/*@editable*/line-height:150%;
 			/*@editable*/text-align:left;
@@ -246,7 +247,7 @@
 	*/
 		.footerContent div{
 			/*@editable*/color:#707070;
-			/*@editable*/font-family:Open Sans;
+			/*@editable*/font-family:Helvetica;
 			/*@editable*/font-size:12px;
 			/*@editable*/line-height:125%;
 			/*@editable*/text-align:left;
@@ -308,6 +309,7 @@
 	a{
 		text-decoration: none;
 		text-transform: none;
+		color: #7db924;
 	}
 	#templateContainer, .bodyContent{
 		background: #f3f3f3;
@@ -356,6 +358,10 @@
 
 	}
 
+	.content-block a{
+		color: #222;
+		margin-left: 10px;
+	}
 	.editor-note, .content-blocks{
 		padding: 20px 30px;
 	}
@@ -377,14 +383,59 @@
 		padding-top: 40px;
 	}
 	.content-block img{
-		width: 128px;
+		width: 100%;
+	}
+
+	.content-block .content{
+		color:#404040; font-family:Helvetica;
+		font-size:16px; 
+		line-height:125%; 
+		text-align:left; 
+		padding-left: 10px;
+	}
+
+	.content-block .content h3{
+		font-size: 16px; line-height: 1.5;
+		font-weight: 600;
+		margin-top: 0;
+		margin-bottom: 5px;
+	}
+
+	.content-block .content p{
+		font-size: 13px; margin-top: 0px; font-style: italic
+	}
+
+	.content-block{
+		border-bottom: 1px rgba(0, 0, 0, 0.08) solid; 
+		padding-bottom: 20px
 	}
 	
 	.footer-nav{
 
 	}
+
+	.footer-nav .nav-icon{
+		padding: 10px
+	}
+
+	@media screen and (max-width: 500px)
+	{
+		.footer-nav .nav-icon p {
+			display: none;
+		}
+	}
+
+	.footer-nav .nav-icon p {
+		margin: 0;
+		padding: 0;
+		color: #222;
+		font-size: 12px;
+
+		
+	}	
 	.footer-nav img{
-		width: 24px;
+		width: 20px;
+		margin-bottom: 2px;
 	}
 
 </style></head>
@@ -401,14 +452,10 @@
                                 	<!-- // Begin Module: Standard Preheader \\ -->
                                     <table border="0" cellpadding="10" cellspacing="0" width="100%">
                                     	<tr>
-                                        	<td valign="top">
-                                            	<div mc:edit="std_preheader_content">         	
-                                              Enjoying our newsletter? <br>   	<a href="http://e27.co/signup">Sign up and get more!</a>
-                                                </div>
-                                            </td>
-                                            <td valign="top" width="180">
-                                            	<div mc:edit="std_preheader_links">
-                                                	<!-- *|IFNOT:ARCHIVE_PAGE|* -->Is this email not displaying correctly?<br><a href="*|ARCHIVE|*" target="_blank">View it in your browser</a>.<!-- *|END:IF|* -->
+                                        
+                                            <td valign="top" width="180" align="center" >
+                                            	<div mc:edit="std_preheader_links" style="text-align: center">
+                                                	<!-- *|IFNOT:ARCHIVE_PAGE|* --><a href="*|ARCHIVE|*" target="_blank">View it in your browser</a><!-- *|END:IF|* -->
                                                 </div>
                                             </td>
                                         </tr>
@@ -428,7 +475,7 @@
                                             <td class="headerContent" valign="middle">
 												<a href="http://e27.co">
 													<img style="vertical-align: middle; max-height: 14px" class="logo" src="https://e27.co/assets/img/jeangrey/logo_e27.png" alt="">
-													<span style="vertical-align: middle; margin-left: 5px; font-size: 12px; color: #fff">Daily Digest</span>
+													<span style="vertical-align: middle; margin-left: 5px; font-size: 12px; color: #fff; font-weight: 500">Daily Digest</span>
 												</a>
                                             	<!-- // Begin Module: Standard Header Image \\ -->
                                             	<!--<img src="http://gallery.mailchimp.com/653153ae841fd11de66ad181a/images/placeholder_600.gif" style="max-width:600px;" id="headerImage campaign-icon" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext>-->
@@ -461,21 +508,21 @@
 													<!-- Featured Content-->
 													<tr>
                                                         <td valign="top" class="box-view featured-content-block">
-                                                            <div mc:edit="std_content00" >
-                                                                <img src="https://e27.co/wp-content/uploads/2017/02/recommendation.jpeg" alt="">
+                                                            <a href="#">
+                                                                <img mc:edit="postcard" src="https://e27.co/wp-content/uploads/2017/02/recommendation.jpeg" alt="">
 																<div class="content">
-																	<span class="h1">Go-Jek releases new app for Go-Life division, ready to launch more lifestyle services</span>
-                                                                	<span>In a rather surprising move, Indonesian ride-hailing giant Go-Jek has released a new mobile app for its lifestyle division, Go-Life. </span>
+																	<span class="h1"  mc:edit="std_content00">Go-Jek releases new app for Go-Life division, ready to launch more lifestyle services</span>
+                                                                	<span mc:edit="content">In a rather surprising move, Indonesian ride-hailing giant Go-Jek has released a new mobile app for its lifestyle division, Go-Life. </span>
 																</div>																
-                                                            </div>
+                                                            </a>
 														</td>
                                                     </tr>
 
 													<!-- Editor Note -->
-													<tr>
+													<tr mc:hideable>
 														<td class="editor-note box-view">
 															<h2>Editor's Note</h2>
-															<p style="font-family: Open Sans; font-size: 16px">																	
+															<p mc:edit="editor_note" style="font-family: Helvetica; font-size: 15px; line-height: 1.5">																	
 																One of the best classes I ever took was "Birth and Death of Stars". I was in my final year and I scored a C- (the minimal passing grade). To be frank, I think I actually failed. But, the teacher saw "History" behind my name and gave me pity points for trying hard. I loved that class — I just suck at math.
 																<br><br>
 																The point is, every now and then a story reminds us of the tech community's greatest strength — the embrace of curiosity. Yesterday, no story made more waves than NASA's discovery of 7 Earth-size planets hosted by a nearby star.
@@ -485,10 +532,10 @@
 																Oh yeah, and some dude sold a [bleeping] ship on Taobao this week.
 															</p>
 															<div class="editor-note-author">
-																<img src="https://scontent.fsgn2-2.fna.fbcdn.net/v/t1.0-1/p200x200/15727006_233554743752328_8853956537853816722_n.jpg?oh=af62cafb6d4114ed1d99c458aa52a9fe&oe=593400C2" alt="">
+																<img mc:edit="editor_note_author_img" style="margin-bottom: 10px" src="https://scontent.fsgn2-2.fna.fbcdn.net/v/t1.0-1/p200x200/15727006_233554743752328_8853956537853816722_n.jpg?oh=af62cafb6d4114ed1d99c458aa52a9fe&oe=593400C2" alt="">
 																<p>
-																	<a href="https://e27.co/kevin-mcspadden">
-																		<b>Kevin McSpadden</b>
+																	<a mc:edit="editor_note_author_name" href="https://e27.co/kevin-mcspadden" style="color: #222">
+																		<b >Kevin McSpadden</b>
 																		<br>
 																		e27 Southeast Asia Editor
 																	</a>
@@ -498,9 +545,9 @@
 													</tr>
 
 													<!-- Ads (Echelon or something else)-->
-													<tr>
+													<tr mc:hideable>
 														<td>
-															<a href=""><img src="https://media.giphy.com/media/26BGz9NZWvploCDNm/source.gif" alt=""></a>
+															<img mc:edit="wide_banner_ads" src="https://media.giphy.com/media/26BGz9NZWvploCDNm/source.gif" alt="">
 														</td>
 													</tr>
 
@@ -511,8 +558,50 @@
 															<table cellspacing="20px" width="100%">
 																
 																
+																<tr mc:repeatable>
+																	<td class="content-block" >																	
+																		<table align="left" border="0" cellpadding="" cellspacing="" width="30%">
+																			<tr>
+																				<td align="center" valign="top">
+																					<img mc:edit="article_image" src="https://e27.co/wp-content/uploads/2017/03/Lattice80_Vizag_event.jpg" width="200" />
+																				</td>
+																			</tr>
+																		</table>
+																		<table align="left" border="0" cellpadding="0" cellspacing="0" width="70%">
+																			<tr>
+																				<td valign="top" class="content">
+																					<a mc:edit="article_title" style="color: #222">
+																						<h3>
+																							Lattice80 expands to Vizag to build fintech ties between Singapore and India
+																						</h3>
+																						<p>by Anthony</p>
+																					</a>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>																	
+																</tr>
+
 																<tr>
-																	<td style="border-bottom: 1px rgba(0, 0, 0, 0.08) solid; padding-bottom: 20px ">
+																	<td class="content-block">
+																		<table width="100%">
+																			<tr>
+																				<td align="left" valign="middle" style="padding-right: 10px;">
+																					<span style="font-weight: 600">Want to be a thought leader on e27?</span>
+																				</td>
+																				<td align="right" valign="middle">
+																					<a href="https://e27.co/contribute" target="_blank" style="letter-spacing: 1px; text-transform: uppercase; width: auto; display: block; font-size: 10px; font-weight: 600; text-align: center; border-radius: 4px; padding: 8px 20px; font-weight: semi-bold; color: #fff; background: #222">
+																						Contribute here
+																					</a>	
+																				</td>
+																			</tr>
+																		</table>
+																		 
+																	</td>
+																</tr>
+																
+																<tr>
+																	<td class="content-block">
 																		<table align="left" border="0" cellpadding="" cellspacing="" width="30%">
 																			<tr>
 																				<td align="center" valign="top">
@@ -522,16 +611,35 @@
 																		</table>
 																		<table align="left" border="0" cellpadding="0" cellspacing="0" width="70%">
 																			<tr>
-																				<td valign="top" style="color:#404040; font-family:Helvetica; font-size:16px; line-height:125%; text-align:left; padding-bottom:20px;">
-																					<h3 style="margin: 0 0 0 10px; font-size: 18px; line-height: 1.5">
+																				<td valign="top" class="content">
+																					<h3>
 																						Lattice80 expands to Vizag to build fintech ties between Singapore and India
 																					</h3>
 																				</td>
 																			</tr>
 																		</table>
-																	</td>
+																	</td>																	
 																</tr>
-
+																<tr>
+																	<td class="content-block">
+																		<table align="left" border="0" cellpadding="" cellspacing="" width="30%">
+																			<tr>
+																				<td align="center" valign="top">
+																					<img src="https://e27.co/wp-content/uploads/2017/03/Lattice80_Vizag_event.jpg" width="200" />
+																				</td>
+																			</tr>
+																		</table>
+																		<table align="left" border="0" cellpadding="0" cellspacing="0" width="70%">
+																			<tr>
+																				<td valign="top" class="content">
+																					<h3>
+																						Lattice80 expands to Vizag to build fintech ties between Singapore and India
+																					</h3>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>																	
+																</tr>
 															
 																<tr>
 																	<td align="center">
@@ -545,7 +653,19 @@
 													<!-- Partner Ads-->
 													<tr>
 														<td>
-															<div></div>
+															<div style="text-align: center" class="box-view">
+																<img  mc:edit="patner_ads" src="https://gallery.mailchimp.com/02d444e2ce648a479f4b6726f/images/43a4c770-b9a6-47e8-a2a3-28cba5fda752.jpg" alt="">
+																<p  mc:edit="patner_ads_content" style="padding: 10px 40px">
+																	Find the right home for your business and connect with a community that can help you grow.		
+																
+																<a href="http://servicedoffices.compassoffices.com/other_serviced-office_asia-2/">Schedule your free tour now.</a>   
+																</p>  
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td style="text-align: center; font-size: 14px">
+															Want your brand on our Daily Digest? Email us at <a href="mailto:engage@e27.co" class="">engage@e27.co</a>!
 														</td>
 													</tr>
                                                 </table>
@@ -566,40 +686,40 @@
 											<td>
 												<table width="100%">
 													<tr>
-														<td align="center">
+														<td align="center" class="nav-icon">
 															<a href="http://e27.co/">
 																<img src="https://e27.co/assets/img/jeangrey/nav/news.png" alt="">
 																<p>News</p>
 															</a>
 														</td>
-														<td align="center">
+														<td align="center" class="nav-icon">
 															<a href="http://e27.co/echelon">
 																<img src="https://e27.co/assets/img/jeangrey/nav/echelon.png" alt="">															
-																Echelon
+																<p>Echelon</p>
 															</a>
 														</td>
-														<td align="center">
+														<td align="center" class="nav-icon">
 															<a href="http://e27.co/startups">
 																<img src="https://e27.co/assets/img/jeangrey/nav/startups.png" alt="">															
-																Startups
+																<p>Startups</p>
 															</a>
 														</td>
-														<td align="center">
+														<td align="center" class="nav-icon">
 															<a href="http://e27.co/investors">
 																<img src="https://e27.co/assets/img/jeangrey/nav/investors.png" alt="">															
-																Investors
+																<p>Investors</p>
 															</a>
 														</td>
-														<td align="center">
+														<td align="center" class="nav-icon">
 															<a href="http://e27.co/jobs">
 																<img src="https://e27.co/assets/img/jeangrey/nav/jobs.png" alt="">															
-																Jobs
+																<p>Jobs</p>
 															</a>
 														</td>
-														<td align="center">
+														<td align="center" class="nav-icon">
 															<a href="http://e27.co/marketplace">
 																<img src="https://e27.co/assets/img/jeangrey/nav/products.png" alt="">															
-																Marketplace
+																<p>Marketplace</p>
 															</a>
 														</td>
 													</tr>
@@ -614,17 +734,17 @@
                                                 <table border="0" cellpadding="20" cellspacing="0" width="100%">
                                                    	<tr style="color: white;">
 														<td>
-															<table>
+															<table style="    border-bottom: rgba(121, 121, 121, 0.92) solid 1px; padding-bottom: 20px;">
 																<tr>
-																		<td valign="middle" >
-																			<span style="font-size: 20px; font-family: Open Sans">
+																		<td valign="middle" style="padding-right: 10px" >
+																			<span style="font-size: 14px; font-family: Helvetica; ">
 																				"To empower entrepreneurs with the tools to build and grow their companies"
 																			</span>
 																		</td>
-																		<td align="right">
-																			<button href="http://e27.co" style="font-size: 10px; border: white solid 2px; border-radius: 4px; padding: 8px 20px; font-weight: semi-bold">
+																		<td align="right" valign="top">
+																			<a href="http://e27.co" target="_blank" style="letter-spacing: 1px; width: 100px; display: block; font-size: 10px; font-weight: 600; text-align: center; border: white solid 2px; border-radius: 4px; padding: 8px 20px; font-weight: semi-bold; color: white">
 																				VISIT E27 NOW
-																			</button>
+																			</a>
 																		</td>
 																</tr>
 															</table>
